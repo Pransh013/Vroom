@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   Sheet,
@@ -14,8 +14,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const MobileNav = () => {
-
-  const pathname = usePathname()
+  const pathname = usePathname();
 
   return (
     <nav className="w-full max-w-64">
@@ -29,8 +28,8 @@ const MobileNav = () => {
             className="cursor-pointer sm:hidden"
           />
         </SheetTrigger>
-        <SheetContent side={"left"} className="bg-primary">
-          <Link href="/" className="flex items-center gap-2">
+        <SheetContent side={"left"} className="bg-primary ">
+          <Link href="/" className="flex items-center gap-2 w-fit">
             <Image
               src={"/icons/logo.svg"}
               width={30}
@@ -44,8 +43,7 @@ const MobileNav = () => {
             <SheetClose asChild>
               <section className="flex h-full flex-col pt-16 pl-4 gap-6 text-white">
                 {sidebarLinks.map((link) => {
-                  const isActive =
-                    pathname === link.route
+                  const isActive = pathname === link.route;
 
                   return (
                     <SheetClose asChild key={link.name}>

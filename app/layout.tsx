@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,9 +17,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className} >
-        {children}
-      </body>
+      <ClerkProvider
+        appearance={{
+          variables: {
+            colorBackground: "#27272A",
+            colorPrimary: "#0E78F9",
+            colorText: "#fff",
+            
+          },
+          layout: {
+            logoImageUrl: "/icons/vroom-logo.png",
+          },
+        }}
+      >
+        <body className={inter.className}>{children}</body>
+      </ClerkProvider>
     </html>
   );
 }
