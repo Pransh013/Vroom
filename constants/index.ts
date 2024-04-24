@@ -25,3 +25,29 @@ export const sidebarLinks = [
     imgUrl: "/icons/personal-room.svg",
   },
 ];
+
+const currDate = new Date();
+
+export const time = currDate.toLocaleTimeString("en-US", {
+  hour: "2-digit",
+  minute: "2-digit",
+});
+
+export const date = currDate.toLocaleDateString("en-IN", {
+  dateStyle: "full",
+});
+
+export type MeetingStateType =
+  | "isSchedulingMeeting"
+  | "isInstantMeeting"
+  | "isJoiningMeeting"
+  | undefined;
+
+
+export type HomeCardProps = {
+  className: string;
+  src: string;
+  title: string;
+  description: string;
+  handleClick: () => void
+};

@@ -5,16 +5,16 @@ import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
 const Navbar = () => {
   return (
-    <header className="flex justify-between items-center fixed z-50 w-full bg-foreground px-6 lg:px-10 h-16 sm:h-20">
+    <header className="flex border-b border-gray-500 justify-between items-center fixed z-50 w-full bg-foreground px-6 lg:px-16 h-16 sm:h-20">
       <Link href="/" className="flex items-center gap-2">
         <Image
           src={"/icons/logo.svg"}
-          width={30}
-          height={30}
+          width={34}
+          height={34}
           alt="logo"
           className="max-sm:size-10"
         />
-        <p className="text-lg text-secondary font-bold uppercase max-sm:hidden">
+        <p className="text-2xl text-secondary font-bold uppercase max-sm:hidden">
           Vroom
         </p>
       </Link>
