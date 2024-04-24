@@ -51,3 +51,8 @@ export type HomeCardProps = {
   description: string;
   handleClick: () => void
 };
+
+export type ModelStateProps = {
+  isOpen: boolean;
+  setIsOpen: () => void;
+};
