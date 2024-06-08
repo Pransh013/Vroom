@@ -1,5 +1,5 @@
-import { HomeCardProps } from "@/constants";
 import { cn } from "@/lib/utils";
+import { HomeCardProps } from "@/types";
 import Image from "next/image";
 import React from "react";
 

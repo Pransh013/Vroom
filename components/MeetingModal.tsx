@@ -6,12 +6,15 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-  AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { ModelStateProps } from "@/constants";
+import { ModelStateProps } from "@/types";
 
 
-const MeetingModal = ({ isOpen, setIsOpen }: ModelStateProps) => {
+const MeetingModal = ({
+  isOpen,
+  setIsOpen,
+  createMeeting,
+}: ModelStateProps) => {
   return (
     <AlertDialog defaultOpen={false} open={isOpen} onOpenChange={setIsOpen}>
       <AlertDialogContent>
@@ -20,7 +23,9 @@ const MeetingModal = ({ isOpen, setIsOpen }: ModelStateProps) => {
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel>Cancel</AlertDialogCancel>
-          <AlertDialogAction>Continue</AlertDialogAction>
+          <AlertDialogAction onClick={createMeeting}>
+            Continue
+          </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
