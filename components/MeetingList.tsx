@@ -63,7 +63,7 @@ const MeetingList = () => {
       />
       <HomeCard
         className="bg-teal-700"
-        src="/icons/add-meeting.svg"
+        src="/icons/join-meeting.svg"
         title="Join Meeting"
         description="via invitation link"
         handleClick={() => {
